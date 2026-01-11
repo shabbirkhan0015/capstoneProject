@@ -1,0 +1,109 @@
+{
+  "queries": [
+    {
+      "id": "Q001",
+      "query": "Where is my order ORD-12345?",
+      "intent": "order_status",
+      "expected_tool": "get_order_status",
+      "category": "order_management"
+    },
+    {
+      "id": "Q002",
+      "query": "I want to return my order ORD-11111",
+      "intent": "return_request",
+      "expected_tool": "create_return_request",
+      "category": "returns"
+    },
+    {
+      "id": "Q003",
+      "query": "What is your return policy?",
+      "intent": "policy_inquiry",
+      "expected_tool": "get_refund_policy",
+      "category": "policies"
+    },
+    {
+      "id": "Q004",
+      "query": "How long does shipping take?",
+      "intent": "shipping_inquiry",
+      "expected_rag": true,
+      "category": "shipping"
+    },
+    {
+      "id": "Q005",
+      "query": "Can I get a refund for order ORD-12345?",
+      "intent": "refund_inquiry",
+      "expected_tool": "get_refund_policy",
+      "category": "refunds"
+    },
+    {
+      "id": "Q006",
+      "query": "What payment methods do you accept?",
+      "intent": "payment_inquiry",
+      "expected_rag": true,
+      "category": "payment"
+    },
+    {
+      "id": "Q007",
+      "query": "I need to track my package",
+      "intent": "tracking_inquiry",
+      "expected_tool": "get_order_status",
+      "category": "order_management"
+    },
+    {
+      "id": "Q008",
+      "query": "How do I initiate a return?",
+      "intent": "return_process",
+      "expected_rag": true,
+      "category": "returns"
+    },
+    {
+      "id": "Q009",
+      "query": "Check status of return RET-12345",
+      "intent": "refund_status",
+      "expected_tool": "get_refund_status",
+      "category": "refunds"
+    },
+    {
+      "id": "Q010",
+      "query": "What items cannot be returned?",
+      "intent": "policy_inquiry",
+      "expected_rag": true,
+      "category": "policies"
+    },
+    {
+      "id": "Q011",
+      "query": "My order hasn't arrived yet",
+      "intent": "delivery_issue",
+      "expected_tool": "get_order_status",
+      "category": "order_management"
+    },
+    {
+      "id": "Q012",
+      "query": "Do you ship internationally?",
+      "intent": "shipping_inquiry",
+      "expected_rag": true,
+      "category": "shipping"
+    },
+    {
+      "id": "Q013",
+      "query": "I want to return item because it's defective",
+      "intent": "return_request",
+      "expected_tool": "create_return_request",
+      "category": "returns"
+    },
+    {
+      "id": "Q014",
+      "query": "How long do refunds take?",
+      "intent": "refund_inquiry",
+      "expected_rag": true,
+      "category": "refunds"
+    },
+    {
+      "id": "Q015",
+      "query": "Can I change my shipping address?",
+      "intent": "order_modification",
+      "expected_rag": true,
+      "category": "order_management"
+    }
+  ]
+}

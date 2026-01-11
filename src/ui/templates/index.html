@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SupportAI – Customer Care</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Top Bar -->
+      <header>
+        <h1>SupportAI</h1>
+        <p class="subtitle">Smart help for orders, refunds & questions</p>
+      </header>
+
+      <!-- Chat -->
+      <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+          <!-- AI Welcome -->
+          <div class="message assistant-message">
+            <div class="message-content">
+              <p>👋 Hi, I'm <b>SupportAI</b>. How can I assist you today?</p>
+
+              <div class="quick-help">
+                <span>Try asking:</span>
+                <ul>
+                  <li>📦 Where is my order?</li>
+                  <li>↩️ How do I return a product?</li>
+                  <li>💳 When will I get my refund?</li>
+                  <li>🚚 Shipping timelines</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input -->
+        <div class="chat-input-container">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Ask about your order, refund, delivery..."
+              autocomplete="off"
+            />
+
+            <button id="sendButton" class="send-button" title="Send">➤</button>
+          </div>
+
+          <button id="resetButton" class="reset-button">Start New Chat</button>
+        </div>
+      </div>
+
+      <!-- Bottom status bar -->
+      <div class="info-panel">
+        <div class="info-item">
+          <span class="info-label">System</span>
+          <span class="info-value" id="statusIndicator">Online</span>
+        </div>
+
+        <div class="info-item">
+          <span class="info-label">AI Engine</span>
+          <span class="info-value" id="modelInfo">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+  </body>
+</html>
